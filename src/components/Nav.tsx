@@ -155,6 +155,7 @@ const Nav = () => {
               pathname.startsWith('/community') ? '/community' :
               pathname
               } 
+                TabIndicatorProps={{ sx: { display: 'none' } }}
           onChange={handleTabChange}>
             {navLinks.map(({ label, href }) => (
               <StyledTab key={href} value={href} label={label} />
