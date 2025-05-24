@@ -1,0 +1,13 @@
+// tsconfig.json or jsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": ".", // root of project
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "checkJs": true,
+    "jsx": "preserve"
+  },
+  "exclude": ["node_modules"]
+}
+ 
