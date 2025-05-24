@@ -64,7 +64,7 @@ const HomepageBody = () => {
       <motion.div   {...motionProps}  >
         {/* Your content */}
       {/* Hero Section */}
-      <HeroSlideshow img="/hero3.PNG" height="95vh" />
+      <HeroSlideshow img="/hero3.png" height="93vh" />
 
       </motion.div>
       {/* Content Sections */}
@@ -96,6 +96,27 @@ const HomepageBody = () => {
           height: 'auto',
           /* Add any additional styles here */
         }} />
+        <Box sx={{
+          // display: 'flex',
+          // flexDirection: 'column',
+          // alignItems: 'center',
+          // justifyContent: 'center',
+          // py: 4,
+          width: '100%',
+          maxWidth: '500px',
+          margin: 'auto',
+        }}>
+          <Button variant="default" fullWidth sx={{
+          mt: 8,
+          // mb: 4,
+            border: '1px solid',
+            color: 'primary.main',
+            borderColor: 'primary.transparent',
+          }}>
+            View All Artworks
+          </Button>
+
+        </Box>
       </Container>
 
       </motion.div>

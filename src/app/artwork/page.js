@@ -61,14 +61,24 @@ const HomepageBody = () => {
   return (
     <Box sx={{}}>
           <motion.div   {...motionProps}  >
-            <Container maxWidth="md" sx={{ py: pySection,px:0 ,pt: pySection*1.4, textAlign: 'center' }}>
+            <Container maxWidth="md" sx={{ py: pySection,px:0 ,pt: pySection*1.4, textAlign: 'left' }}>
             
               {/* <Section section={homepageContent.sections[1]} /> */}
               <SectionDiv title="ARTWORK"  
-              align="center"/>
+              align="left"/>
               <div>
+                <br />
                 some sort of dynamic artwork display will go here
+<br />
+                  Exhibitions and artworks can be associated with each other, so that when you click on an exhibition, you can see the artworks associated with it, and vice versa.
+                <br />
+                they can also be categorized and tagged, so that users can filter them
+
+                <br /> 
+                this can all be easily managed by the admin in the CMS
               </div>
+
+              
               <img src="/art.png" alt="Full Width Section" style={{
                 width: '100%',
                 padding: '32px 0px',

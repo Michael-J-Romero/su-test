@@ -90,9 +90,9 @@ const HomepageBody = () => {
       {getTabContent(activeTab)}
        <br />
             <br />
-            <h1>
-              Note: this layout has not been designed yet, it is only here to visualize the structure.
-            </h1>
+            <strong>
+              Note: this layout has not been designed yet, it is only here to visualize the site structure.
+            </strong>
     </>)
 
     function getTabContent(tab) {

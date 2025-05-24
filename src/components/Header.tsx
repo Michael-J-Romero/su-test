@@ -28,7 +28,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 160); // adjust threshold as needed
+      setScrolled(window.scrollY > 50); // adjust threshold as needed
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -45,7 +45,8 @@ const Header = () => {
         color: "text.primary", 
         transition: "background-color 0.3s ease, padding 0.6s ease",
         backgroundColor: scrolled ? "rgb(212, 220, 226)" : 'rgb(200 213 224 / 56%)',
-        py: scrolled ? 1.5 : 3.5,
+        // backgroundColor: scrolled ? "#fff" : "#fff8",
+        py: scrolled ? 1.5 : 3,
         zIndex: settings.zIndex.header,
       }}
     >
@@ -71,12 +72,12 @@ const Header = () => {
           <div style={{
             display: "flex",
             alignItems: "center",
-            fontSize: "1.7rem",
+            fontSize: "1.8rem",
             // fontWeight: 100,
             //space letters
             letterSpacing: "5px",
             fontFamily: "system-ui",
-            marginLeft: "1rem",
+            // marginLeft: "1rem",
           }}>
 
           蘇笑柏
@@ -87,7 +88,7 @@ const Header = () => {
             sx={{
               // alignSelf: "flex-end",
               fontWeight: "normal",
-              fontSize: scrolled?"1.4rem":'1.45rem',
+              fontSize: scrolled?"1.4rem":'1.4rem',
         transition: "font-size 0.3s ease",
 
               display: { xs: "none", sm: "block" },
@@ -103,7 +104,7 @@ const Header = () => {
               display: "flex",
               alignItems: "center", 
               // fontSize: "1.3rem",
-              fontWeight: 500,
+              fontWeight: 400,
             }}>
 
             SU XIAOBAI 

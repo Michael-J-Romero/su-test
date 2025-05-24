@@ -24,16 +24,13 @@ const homepageContent = {
     {
       title: "ABOUT THE FOUNDATION",
       align: "left",
-      img: "/home1.jpg",
-      text: `The Su Xiaobai Foundation was founded in 2024. Sponsored by the artist Su Xiaobai, the Foundation is dedicated to supporting research and greater public interest in the ideas and practice of new generations of international artists. 
+      img: "/hero.jpg",
+      text: `Page under construction. 
+       
+
 
  
-
-In particular, the Foundation seeks to support artists who share Su Xiaobai’s commitment to reviving traditional materials and techniques in the production of contemporary art. 
-
- 
-
-The Foundation is building a collection of Su Xiaobai's work. The majority of the collection is donated by the artist himself, and donations from individual collectors and institutions are welcomed. `
+`
     
     },
     {
@@ -61,10 +58,21 @@ const HomepageBody = () => {
   return (
     <Box sx={{}}>
       <motion.div   {...motionProps}  >
-      <Container maxWidth="md" sx={{ py: pySection*1.5,pt: pySection*1.6, textAlign: 'center' }}>
-        <SectionDiv title="Foundation" align="left" />
- Foundation page - Under Construction
+      <Container maxWidth="md" sx={{ py: pySection*1,pt: pySection*1.6, textAlign: 'left' }}>
         {/* <Section section={homepageContent.sections[0]} /> */}
+        <SectionDiv title="Page under construction"  align="left"  />
+        <br />
+        <br />
+        <br />
+        Page under construction
+        <br />
+        <br />
+        <br />
+        Page under construction
+        <br />
+        <br />
+        <br />
+        Page under construction
       </Container>
       
       </motion.div>
@@ -101,7 +109,15 @@ function FullWidthSection({img}) {
     position: 'relative',
   }}>  
             
+<Box sx={{
 
+
+}}>
+        <SectionDiv title="Page under construction"  align="right" dark={true} />
+<br />
+        <br />
+        <br /> 
+</Box>
 
      {img== undefined ? [
 
@@ -171,7 +187,7 @@ const fadeInUp = {
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", md: reverse ? "row-reverse" : "row" },
+        flexDirection:'column',
         gap: 4,
         py: 2,
         // mb: 12,

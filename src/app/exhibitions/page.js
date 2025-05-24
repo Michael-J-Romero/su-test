@@ -67,9 +67,19 @@ const HomepageBody = () => {
               <SectionDiv title="EXHIBITIONS"
               align="center"/>
               <div>
+                <br />
                 some sort of dynamic list of exhibitions (past and upcoming) will go here
                 <br />
-                below is a placeholder, it doesn't reflect what the actual exhibition will look like
+                below is a placeholder, it doesn't reflect what the actual exhibitions will look like
+                <br />
+                <br />
+
+                Exhibitions and artworks can be associated with each other, so that when you click on an exhibition, you can see the artworks associated with it, and vice versa.
+                <br />
+                they can also be categorized and tagged, so that users can filter them
+
+                <br /> 
+                this can all be easily managed by the admin in the CMS
               </div>
               <img src="/art.png" alt="Full Width Section" style={{
                 width: '100%',
