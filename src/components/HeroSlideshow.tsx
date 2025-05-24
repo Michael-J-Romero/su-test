@@ -13,7 +13,7 @@ const settings=allSettings.HeroSlideshow
 function Quote({ txt, by }: { txt: string; by: string }) {
   return (
    <Box sx={{ textAlign: "center",  px: 2 }}>
-  <Typography variant="h4" sx={{ fontWeight: 100, fontStyle: "italic", lineHeight: 1.5 }}>
+  <Typography variant="h4" sx={{ fontWeight: 100, fontStyle: "italic", lineHeight: 1.5,fontSize: '1.99rem', }}>
     “Design doesn't wait 
     <br />
     for the right hero section quote.”
@@ -36,7 +36,8 @@ export default function CrossfadeBanner({img,height}) {
             position: 'absolute',
             top: '35%',
             color: '#fff',
-            left:' 10%',
+            left:' 9.5%',
+            // fontSize: '2.5rem',
             // width: '100%',
             // height: '100%',
             zIndex: 15,

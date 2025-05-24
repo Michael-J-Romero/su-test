@@ -64,7 +64,7 @@ const HomepageBody = () => {
       <motion.div   {...motionProps}  >
         {/* Your content */}
       {/* Hero Section */}
-      <HeroSlideshow img="/hero3.png" height="93vh" />
+      <HeroSlideshow img="/hero3.PNG" height="93vh" />
 
       </motion.div>
       {/* Content Sections */}
