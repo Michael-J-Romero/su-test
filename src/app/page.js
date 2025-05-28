@@ -95,7 +95,7 @@ const HomepageBody = () => {
         <motion.div style={{
           filter: filter,
           opacity: opacity,
-          backgroundImage: 'url(/hero3.png)',
+          backgroundImage: 'url(/hero3.PNG)',
           backgroundColor: '#ccc',
 
           backgroundSize: 'cover',
