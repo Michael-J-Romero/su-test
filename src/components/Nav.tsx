@@ -44,6 +44,11 @@ const StyledTab = muiStyled(Tab)(({ theme }) => ({
   borderRadius: 4,
   padding: '0px 16px',
   marginRight: '2px',
+  fontFamily: 'system-ui, sans-serif',
+  fontWeight: 500,
+  fontSize: '0.875rem',
+  lineHeight: 1.5,
+  
   color: theme.palette.text.secondary,
   '&.Mui-selected': {
     color: theme.palette.primary.light,

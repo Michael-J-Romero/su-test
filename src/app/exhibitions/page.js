@@ -61,11 +61,11 @@ const HomepageBody = () => {
   return (
     <Box sx={{}}>
           <motion.div   {...motionProps}  >
-            <Container maxWidth="md" sx={{ py: pySection,px:0 ,pt: pySection*1.4, textAlign: 'center' }}>
+            <Container maxWidth="md" sx={{ py: pySection,px:0 ,pt: pySection*1.4,   }}>
             
               {/* <Section section={homepageContent.sections[1]} /> */}
               <SectionDiv title="EXHIBITIONS"
-              align="center"/>
+              align="left"/>
               <div>
                 <br />
                 some sort of dynamic list of exhibitions (past and upcoming) will go here

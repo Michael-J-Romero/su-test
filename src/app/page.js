@@ -62,10 +62,10 @@ const HomepageBody = () => {
   const [currentSection, setCurrentSection] = useState(0);
   const [relativeY, setRelativeY] = useState(0);
   
-  let ee=80
-   let ee2=250
+  let ee=40
+   let ee2=200
    const topOfCurrentSection = sectionBounds[currentSection - 1] || 0;
-   const opacity = useTransform(scrollY, [topOfCurrentSection+ee,        topOfCurrentSection+ee2*1.6], [0, .8]);
+   const opacity = useTransform(scrollY, [topOfCurrentSection+ee,        topOfCurrentSection+ee2*1.6], [0, .9]);
    const grayscaleValue = useTransform(scrollY, [topOfCurrentSection+ee, topOfCurrentSection+ee2*1.6], [ .8,.05]);
    const filter = useTransform(grayscaleValue, (v) => `grayscale(${v}) blur(${v * 12}px)`);
    
@@ -96,10 +96,13 @@ zIndex: -1,
           position: 'fixed',
           }}>
             
-        <motion.div style={{
+        <motion.div 
+        className="hero-bg"
+        style={{
           filter: filter,
           opacity: opacity,
-          backgroundImage: 'url(/hero3.PNG)',
+          // backgroundImage: 'url(/hero3.PNG)',
+          backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.4) 100%), url(/hero3.PNG)",
           // backgroundColor: '#ccc',
 
           backgroundSize: 'cover',
@@ -133,7 +136,7 @@ zIndex: -1,
           height: '100%',
           zIndex: -1,
         opacity: opacity,
-        background: 'linear-gradient(90deg, rgba(224, 224, 224, 0.71)  0%, rgba(224, 224, 224, 0.51) 40%, rgba(0, 0, 0, 0) 81%)',
+        background: 'linear-gradient(90deg, rgba(224, 224, 224, 0.61)  0%, rgba(224, 224, 224, 0.41) 40%, rgba(0, 0, 0, 0) 81%)',
       }}>
 
       </motion.div>
@@ -163,12 +166,13 @@ zIndex: -1,
           boxShadow: 4,
           mt: '89vh',
           borderRadius: .5,
-          py: pySection / 4,
+          py: pySection / 2,
           pt: pySection,
+          px:0,
         }}
         style={{
-          paddingLeft: 0,
-          paddingRight: 0,
+          paddingLeft: '12px',
+          paddingRight: '12px',
 
         }}>
           <Section2 section={homepageContent.sections[0]} />
@@ -220,7 +224,7 @@ zIndex: -1,
               padding: 4,
               pb: pySection ,
             }}>
-              <SectionDiv title="THE ARTIST" align="center" />
+              <SectionDiv title="ABOUT THE ARTIST" align="center" />
               <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -241,8 +245,12 @@ zIndex: -1,
                 <Button variant="default" fullWidth sx={{
                   border: '1px solid',
                   color: 'primary.main',
+                  borderRadius: .3,
                   borderColor: 'primary.transparent',
-                }}>
+               '& .MuiTouchRipple-root .MuiTouchRipple-rippleVisible': {
+      color: 'grey', // ripple color
+    },
+               }}>
                   Learn More
                 </Button>
               </Box>
@@ -257,7 +265,8 @@ zIndex: -1,
         backgroundColor: '#eee',
       }}>
         <Container maxWidth="md" sx={{
-          py: pySection*2 ,
+          py: pySection*.9 ,
+          pb: pySection *2,
           px: 0
         }}>
           {/* <Section section={homepageContent.sections[1]} /> */}
@@ -286,11 +295,11 @@ zIndex: -1,
             margin: 'auto',
           }}>
           </Box> */}
-          <Box sx={{
+          {/* <Box sx={{
             py: pySection,
           }}>
             <ExhibitionSection />
-          </Box>
+          </Box> */}
         </Container>
       </motion.div>
       {/* <Footer /> */}
@@ -331,7 +340,8 @@ function ExhibitionSection() {
       pt: pySection*1.5 ,
     }}>
       <SectionDiv title="EXHIBITIONS" align="center" />
-      <Grid container spacing={4} sx={{ 
+     exhibitions section under construction
+      {/* <Grid container spacing={4} sx={{ 
         mt: 1,
         }}>
         {exhibitions.map((exhibition, index) => (
@@ -344,7 +354,7 @@ function ExhibitionSection() {
                 sx={{ height: 200, objectFit: 'cover' }}
               />
               <CardContent>
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" gutter>
                   {exhibition.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -357,7 +367,7 @@ function ExhibitionSection() {
             </Card>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
     </Box>
   )
 }
@@ -488,10 +498,19 @@ function Media({ img, text, reverse }) {
         <motion.div variants={fadeInUp}
           viewport={{ once: true, amount: 0.2 }}
           custom={0.2}>
-          <Button variant="default" fullWidth sx={{
-            border: '1px solid',
+          <Button variant="default" 
+          // no ripple
+          // disableRipple
+          color="secondary"
+          fullWidth sx={{
+            // border: '1px solid',
+                  border: '1px solid',
+            borderRadius: .3,
             color: 'primary.main',
             borderColor: 'primary.transparent',
+            '& .MuiTouchRipple-root .MuiTouchRipple-rippleVisible': {
+      color: 'grey', // ripple color
+    },
           }}>
             Learn More
           </Button>

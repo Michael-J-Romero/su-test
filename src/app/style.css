@@ -8,3 +8,7 @@
 .css-2vuj9t-MuiButtonBase-root-MuiListItemButton-root.Mui-selected {
     background-color: #d9d9d9;
 }
+.hero-bg{
+            -webkit-mask-image: linear-gradient(to left, black 20%, #0009 100%);
+
+}

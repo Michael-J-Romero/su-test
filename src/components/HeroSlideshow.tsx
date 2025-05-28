@@ -22,7 +22,10 @@ function Quote({ txt, by }: { txt: string; by: string }) {
     {/* <br /> */}
     Once we find the right one.”
   </Typography>
-  <Typography variant="body2" sx={{ mt: 2,  ml: 3, fontWeight: 600,}}>
+  <Typography variant="body2" sx={{
+    textShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
+    
+    mt: 2,  ml: 0, fontWeight: 300,}}>
     — Michael Romero
   </Typography>
 </Box>
@@ -36,13 +39,13 @@ export default function CrossfadeBanner({img,height,relativeY,currentSection}) {
   // }
 
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], [0, -50]); // Adjust range for more/less parallax
-  const pageHeight = window.innerHeight;
+  const y = useTransform(scrollY, [0, 300], [0, -70]); // Adjust range for more/less parallax
+  // const pageHeight = window.innerHeight;
 
   
-  let e=50
-  let e2=350
-  const opacity = useTransform(scrollY, [e, e2*1.6], [.8, .4]);
+  let e=150
+  let e2=550
+  const opacity = useTransform(scrollY, [e, e2*1.6], [.9, .4]);
   const grayscaleValue = useTransform(scrollY, [e, e2/2], [0, .8]);
   const filter = useTransform(grayscaleValue, (v) => `grayscale(${v}) blur(${v * 12}px)`);
   return (
@@ -60,7 +63,10 @@ export default function CrossfadeBanner({img,height,relativeY,currentSection}) {
         style={{
           position: 'absolute',
           top: '26%',
-          left: '20.5%',
+          left: '0',
+          width: '100%',
+          margin: '0 auto',
+
           zIndex: 15,
           display: 'flex',
           flexDirection: 'column',
