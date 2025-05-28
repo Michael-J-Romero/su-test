@@ -11,7 +11,7 @@ const Logo = styled(Typography)`
   // letter-spacing: 1px;
   // flex-grow: 1;
 `;
-const LogoComponent = ({ scrolled ,vertical,router}) => {
+const LogoComponent = ({ scrolled ,vertical,router,dark}) => {
     // const router = useRouter();
 
     return (
@@ -31,7 +31,8 @@ const LogoComponent = ({ scrolled ,vertical,router}) => {
                     display: "flex",
                     alignItems: "center",
                     fontSize: "1.8rem",
-                    color: "#000000ab",
+                    color: dark? "#ffffffab"
+                    :"#000000ab",
                     letterSpacing: "5px",
                     fontFamily: "system-ui",
                 }}
@@ -42,6 +43,7 @@ const LogoComponent = ({ scrolled ,vertical,router}) => {
                 onClick={() => router?.push?.("/", undefined, { shallow: true })}
                 variant="h6"
                 sx={{
+                    color: dark? "#ffffff": "#000000",
                     fontWeight: "normal",
                     fontSize: scrolled ? "1.4rem" : "1.4rem",
                     transition: "font-size 0.3s ease",

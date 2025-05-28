@@ -86,11 +86,12 @@ const HomepageBody = () => {
         <HeroSlideshow img="/wallart.png" height="100vh" {...{relativeY,currentSection}}/>
         : null
       }
-      {currentSection === 1 ?
+      {true ?
           <div style={{
           filter: filter,
-          // opacity: currentSection === 1 ? 1 : 0,
           transition: 'opacity 0.3s ease-in-out',
+          // transform: 'scale(-1)',
+          backgroundPosition: 'center',
 
 zIndex: -1,
           position: 'fixed',
@@ -100,7 +101,9 @@ zIndex: -1,
         className="hero-bg"
         style={{
           filter: filter,
-          opacity: opacity,
+          // opacity: opacity,
+          opacity: currentSection === 1 ? opacity : 0,
+
           // backgroundImage: 'url(/hero3.PNG)',
           backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.4) 100%), url(/hero3.PNG)",
           // backgroundColor: '#ccc',
@@ -135,7 +138,8 @@ zIndex: -1,
           width: '100%',
           height: '100%',
           zIndex: -1,
-        opacity: opacity,
+          opacity: currentSection === 1 ? opacity : 0,
+
         background: 'linear-gradient(90deg, rgba(224, 224, 224, 0.61)  0%, rgba(224, 224, 224, 0.41) 40%, rgba(0, 0, 0, 0) 81%)',
       }}>
 
@@ -265,8 +269,8 @@ zIndex: -1,
         backgroundColor: '#eee',
       }}>
         <Container maxWidth="md" sx={{
-          py: pySection*.9 ,
-          pb: pySection *2,
+          py: pySection ,
+          pb: pySection ,
           px: 0
         }}>
           {/* <Section section={homepageContent.sections[1]} /> */}
@@ -284,7 +288,7 @@ zIndex: -1,
 
           <img src="/art.png" alt="Full Width Section" style={{
             width: '100%',
-            transform: 'scale(1.2)',
+            transform: 'scale(1)',
             transformOrigin: 'top center',
             height: 'auto',
           }} />

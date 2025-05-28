@@ -20,11 +20,11 @@ function Quote({ txt, by }: { txt: string; by: string }) {
     }}>
     “A quote will go here,
     {/* <br /> */}
-    Once we find the right one.”
+    {" "}Once we find the right one.”
   </Typography>
   <Typography variant="body2" sx={{
     textShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
-    
+    fontFamily: 'system-ui, sans-serif',
     mt: 2,  ml: 0, fontWeight: 300,}}>
     — Michael Romero
   </Typography>
