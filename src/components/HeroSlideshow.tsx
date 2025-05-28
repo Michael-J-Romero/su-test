@@ -42,7 +42,7 @@ export default function CrossfadeBanner({img,height,relativeY,currentSection}) {
   
   let e=50
   let e2=350
-  const opacity = useTransform(scrollY, [e, e2*1.6], [.9, .4]);
+  const opacity = useTransform(scrollY, [e, e2*1.6], [.8, .4]);
   const grayscaleValue = useTransform(scrollY, [e, e2/2], [0, .8]);
   const filter = useTransform(grayscaleValue, (v) => `grayscale(${v}) blur(${v * 12}px)`);
   return (
