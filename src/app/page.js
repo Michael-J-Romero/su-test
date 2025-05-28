@@ -82,21 +82,25 @@ const HomepageBody = () => {
       {/* Your content */}
       {/* Hero Section */}
       {
-        currentSection === 0 ?
+        1 ?
         <HeroSlideshow img="/wallart.png" height="100vh" {...{relativeY,currentSection}}/>
         : null
       }
       {currentSection === 1 ?
           <div style={{
           filter: filter,
+          // opacity: currentSection === 1 ? 1 : 0,
+          transition: 'opacity 0.3s ease-in-out',
 
+zIndex: -1,
+          position: 'fixed',
           }}>
             
         <motion.div style={{
           filter: filter,
           opacity: opacity,
           backgroundImage: 'url(/hero3.PNG)',
-          backgroundColor: '#ccc',
+          // backgroundColor: '#ccc',
 
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -115,7 +119,7 @@ const HomepageBody = () => {
           width: '100%',
           height: '100%',
           zIndex: -2,
-          backgroundColor: '#ccc',
+          // backgroundColor: '#ccc',
           opacity: 0.8,
         }} />
 

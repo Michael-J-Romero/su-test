@@ -31,9 +31,9 @@ function Quote({ txt, by }: { txt: string; by: string }) {
 }
 
 export default function CrossfadeBanner({img,height,relativeY,currentSection}) {
-  if(currentSection !== 0) {
-    return null; // Hide the banner when not on the first section
-  }
+  // if(currentSection !== 0) {
+  //   // return null; // Hide the banner when not on the first section
+  // }
 
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 300], [0, -50]); // Adjust range for more/less parallax
@@ -48,10 +48,14 @@ export default function CrossfadeBanner({img,height,relativeY,currentSection}) {
   return (
           
     <Box className = "hero" sx={{ 
+
       position: 'fixed', top: 0, left: 0, zIndex:-10,
       
      height: height||'80vh', width: '100%', overflow: 'hidden' }}>
-      
+      <div style={{
+              // opacity: currentSection === 0 ? 1 : 0,
+      transition: 'opacity 0.3s ease-in-out',
+      }}>
            <motion.div
         style={{
           position: 'absolute',
@@ -75,6 +79,7 @@ export default function CrossfadeBanner({img,height,relativeY,currentSection}) {
           by='Michael Romero'
           />
           </motion.div>
+          </div>
         <motion.div
           style={{
             // transitionDuration: '0.5s',
