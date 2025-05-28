@@ -52,7 +52,7 @@ const motionProps = {
 const HomepageBody = () => {
   const { scrollY } = useScroll();
   let e = 200
-  let e2 = 1900
+  let e2 = 2100
   const y = useTransform(scrollY, [e, e + e2], [e, -e]);
 
 
@@ -65,7 +65,7 @@ const HomepageBody = () => {
   let ee=80
    let ee2=250
    const topOfCurrentSection = sectionBounds[currentSection - 1] || 0;
-   const opacity = useTransform(scrollY, [topOfCurrentSection+ee,        topOfCurrentSection+ee2*1.6], [.3, .8]);
+   const opacity = useTransform(scrollY, [topOfCurrentSection+ee,        topOfCurrentSection+ee2*1.6], [0, .8]);
    const grayscaleValue = useTransform(scrollY, [topOfCurrentSection+ee, topOfCurrentSection+ee2*1.6], [ .8,.05]);
    const filter = useTransform(grayscaleValue, (v) => `grayscale(${v}) blur(${v * 12}px)`);
    
@@ -107,7 +107,9 @@ zIndex: -1,
           position: 'fixed',
           top: 0,
           left: 0,
-          width: '100%',
+          transform: 'scale(1.2)',
+          transformOrigin: 'center',
+          width: '110%',
           height: '100%',
           zIndex: -1,
           y: y,
