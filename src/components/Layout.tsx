@@ -70,6 +70,8 @@ const Layout = ({ children }) => {
         {/* <CssBaseline /> */}
         <div style={{
           position: 'absolute',
+backgroundColor: 'red',
+
           top: 0,
           left: 0,
 zIndex: 99999999,
@@ -78,7 +80,6 @@ zIndex: 99999999,
         </div>
         <Header />
         <div style = {{
-
 
 //here
           overflowsss: fullScreenNO ? 'hidden' : 'auto',

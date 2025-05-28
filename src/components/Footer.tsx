@@ -16,6 +16,7 @@ const Footer = () => {
     <FooterContainer
     style={{
                 backgroundColor: darkBg,
+                filter: 'grayscale(1) brightness(1.5) invert(1)',
                 color: '#ffffff',
                 padding: '4px 16px',
                 borderTop: '1px solid #444',

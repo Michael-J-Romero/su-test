@@ -208,8 +208,7 @@ const Nav = () => {
       <Dialog open={loginOpen} onClose={() => setLoginOpen(false)} maxWidth="xs" fullWidth>
         <DialogTitle>Language</DialogTitle>
         <DialogContent>
-          {/* chinese, english, french, spanish */}
-          {/* in a dropdown menu */}
+          {/* chinese, english, french, spanish ,german*/}          {/* in a dropdown menu */}
           <TextField
             select
             fullWidth
@@ -223,6 +222,7 @@ const Nav = () => {
             <MenuItem value="en">English</MenuItem>
             <MenuItem value="es">Español </MenuItem>
             <MenuItem value="fr">Français</MenuItem>
+            <MenuItem value="de">Deutsch</MenuItem>
           </TextField>
         </DialogContent>
         <DialogActions>

@@ -43,10 +43,10 @@ const Header = () => {
         // backgroundColor: "#fff8",
         backdropFilter: "blur(10px)",
         color: "text.primary", 
-        transition: "background-color 0.3s ease, padding 0.6s ease",
-        backgroundColor: scrolled ? "rgb(212, 220, 226)" : 'rgb(200 213 224 / 56%)',
+        transition: "background-color 0.3s ease, padding 0.3s ease",
+        backgroundColor: scrolled ? "rgb(212, 220, 226)" : 'rgb(212 220 226 / 66%)',
         // backgroundColor: scrolled ? "#fff" : "#fff8",
-        py: scrolled ? 1.5 : 3,
+        py: scrolled ? 1.5 : 2.5,
         zIndex: settings.zIndex.header,
       }}
     >
