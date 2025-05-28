@@ -65,7 +65,7 @@ const HomepageBody = () => {
   let ee=80
    let ee2=250
    const topOfCurrentSection = sectionBounds[currentSection - 1] || 0;
-   const opacity = useTransform(scrollY, [topOfCurrentSection+ee,        topOfCurrentSection+ee2*1.6], [0, 1]);
+   const opacity = useTransform(scrollY, [topOfCurrentSection+ee,        topOfCurrentSection+ee2*1.6], [.3, .8]);
    const grayscaleValue = useTransform(scrollY, [topOfCurrentSection+ee, topOfCurrentSection+ee2*1.6], [ .8,.05]);
    const filter = useTransform(grayscaleValue, (v) => `grayscale(${v}) blur(${v * 12}px)`);
    
