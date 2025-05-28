@@ -67,7 +67,8 @@ export default function CrossfadeBanner({img,height,relativeY,currentSection}) {
           alignItems: 'center',
           justifyContent: 'center',
           color: '#fff',
-          opacity: opacity,
+          opacity: currentSection === 0 ? opacity : 0,
+
           y, // parallax effect applied here
         }}
       >
