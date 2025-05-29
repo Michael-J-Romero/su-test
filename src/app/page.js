@@ -265,7 +265,7 @@ zIndex: -1,
 
 
 {/* Third Section */}
-      <motion.div   {...motionProps} style={{
+      <div style={{
         backgroundColor: '#eee',
       }}>
         <Container maxWidth="md" sx={{
@@ -305,7 +305,7 @@ zIndex: -1,
             <ExhibitionSection />
           </Box> */}
         </Container>
-      </motion.div>
+      </div>
       {/* <Footer /> */}
     </Box>
   );
